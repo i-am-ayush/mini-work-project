@@ -7,4 +7,12 @@
   <listener>
     <listener-class>listener.OnStart</listener-class>
   </listener>
+  <servlet>
+    <servlet-name>s2</servlet-name>
+    <servlet-class>controller.practice</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s2</servlet-name>
+    <url-pattern>/prac</url-pattern>
+  </servlet-mapping>
 </web-app>

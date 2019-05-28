@@ -1,11 +1,13 @@
 package bean;
 
-class Member{
-    enum MemberType{
-        SITTER,SEEKER;
-    }
+public class Member {
     private int id;
     private String firstName;
+    private String lastName;
+    private int phoneNumber;
+    private String email;
+    private String address;
+    private MemberType type;
 
     public int getId() {
         return id;
@@ -62,10 +64,13 @@ class Member{
     public void setType(MemberType type) {
         this.type = type;
     }
+    public enum MemberType {
+        SITTER, SEEKER;
 
-    private String lastName;
-    private int phoneNumber;
-    private String email;
-    private String address;
-    private MemberType type;
+        public static MemberType stringToEnum(String s) {
+            if (s.equals("SITTER"))
+                return SITTER;
+            return SEEKER;
+        }
+    }
 }

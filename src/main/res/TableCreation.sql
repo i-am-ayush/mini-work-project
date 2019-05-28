@@ -29,7 +29,7 @@ CREATE TABLE sitter(
     FOREIGN KEY (postedBy) REFERENCES member(id)
     );
   CREATE TABLE application(
-    id int(32) PRIMARY KEY,
+    id int(32) AUTO_INCREMENT PRIMARY KEY,
     jobId int,
     memberId int(32),
     expectedPay DOUBLE,
